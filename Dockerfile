@@ -8,7 +8,6 @@ RUN apk --no-cache add \
         cmake \
         valgrind \
         binutils \
-        python3 \
         tar \
         gzip \
         git \
