@@ -23,5 +23,6 @@ ARG YAMLCPP_TAG=yaml-cpp-0.6.2
 
 RUN git clone --depth 1 --branch ${YAMLCPP_TAG} ${YAMLCPP_URL} \
     && (cd yaml-cpp; cmake -DCMAKE_INSTALL_PREFIX=${USRLOCAL} . ; make -j 8; make install) \
-    && rm -rf yaml-cpp
+    && rm -rf yaml-cpp \
+    && pip install -U pytest
 
